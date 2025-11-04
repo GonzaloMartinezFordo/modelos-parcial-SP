@@ -2,9 +2,9 @@
   
   Distintas tareas se ocuparán de mostrar los gráficos en pantalla y de realizar otros pre/postprocesamientos de imagen on-the-fly. Para esto, el sistema debe soportar que las tareas puedan acceder al buffer de video a través de los siguientes mecanismos:
 
-	- DMA (Direct Memory Access): se mappea la dirección virtual `0xBABAB000` del espacio de direcciones de la tarea directamente al buffer de video.
+- DMA (Direct Memory Access): se mappea la dirección virtual `0xBABAB000` del espacio de direcciones de la tarea directamente al buffer de video.
 
-	- Por copia: se realiza una copia del buffer en una página física específica y se mapea en una dirección virtual provista por la tarea. Cada tarea debe tener una copia única.
+- Por copia: se realiza una copia del buffer en una página física específica y se mapea en una dirección virtual provista por la tarea. Cada tarea debe tener una copia única.
 
 Dicho buffer se encuentra en la dirección física de memoria `0xF151C000` y solo debe ser modificable por el lector de cartuchos.
 
